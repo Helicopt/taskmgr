@@ -134,7 +134,7 @@ class TaskManager(object):
                 tmp = TaskManager.default_group()
                 tmp.update(ret[group_type][one])
                 ret[group_type][one] = tmp
-        return data
+        return ret
 
     def __init__(self, cfg_path: AnyStr = '~/.tmgr.conf', create_if_not_exists: bool = True, width: int = 80):
         self.cfg_path = os.path.abspath(os.path.expanduser(cfg_path))
